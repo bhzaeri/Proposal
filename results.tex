@@ -1,0 +1,166 @@
+\documentclass{article}
+
+\usepackage{multirow}
+\usepackage{arrayjob}
+
+\newcount\fooo
+\long\def\addto#1#2{\expandafter\def\expandafter#1\expandafter{#1#2}}
+\newarray\names \readarray{names}{Katie&Frank&Laura&Joe22}
+
+
+\newarray\meansfpso
+\readarray{meansfpso}{2.138157e+08&1.352649e+04&3.064714e+02&1.583199e+03&5.015503e+02&6.009482e+02&7.042910e+02&8.203406e+02&9.036447e+02&8.964483e+04&1.106949e+03&1.300718e+03&1.623582e+03&1.601566e+03&1.609993e+03}
+\newarray\meansfep
+\readarray{meansfep}{2.040872e+09&3.503926e+04&3.138285e+02&3.172025e+03&5.067958e+02&6.034668e+02&7.999019e+02&5.558336e+06&9.044253e+02&5.004825e+05&1.166344e+03&1.509656e+03&3.778261e+03&1.626201e+03&2.046239e+03}
+\newarray\meanpso
+\readarray{meanpso}{3.048318e+08&2.302715e+04&3.067392e+02&1.366547e+03&5.015435e+02&6.017535e+02&7.119572e+02&8.529971e+02&9.035262e+02&7.352657e+04&1.105856e+03&1.282192e+03&1.634022e+03&1.607456e+03&1.825546e+03}
+\newarray\meancaep
+\readarray{meancaep}{3.107426e+09&7.939967e+04&3.112132e+02&2.393013e+03&5.043716e+02&6.066964e+02&8.024372e+02&5.026356e+03&9.044749e+02&1.662734e+07&1.166454e+03&6.295140e+03&3.614249e+03&1.635996e+03&2.130541e+03}
+\newarray\bestsfpso
+\readarray{bestsfpso}{359556.9286&10787.6651&306.2688&1443.1549&501.2390&600.8015&703.7501&816.5554&903.5440&10332.5348&1106.3587&1295.6163&1617.4672&1599.4823&1547.9172}
+\newarray\bestsfep
+\readarray{bestsfep}{7.555975e+07&1.196876e+04&3.138285e+02&3.172025e+03&5.067913e+02&6.023944e+02&7.999019e+02&5.558336e+06&9.044253e+02&5.004824e+05&1.166344e+03&1.393729e+03&3.778261e+03&1.626201e+03&2.046175e+03}
+\newarray\bestpso
+\readarray{bestpso}{102479.1580&13856.2910&305.8978&1038.6803&501.4278&601.4588&709.9928&815.2187&903.4610&7933.8017&1104.1271&1252.4376&1626.4161&1606.6267&1776.2794}
+\newarray\bestcaep
+\readarray{bestcaep}{2.186939e+09&3.782168e+04&3.111638e+02&2.393013e+03&5.043702e+02&6.066964e+02&8.024372e+02&8.148824e+02&9.044749e+02&1.662734e+07&1.166454e+03&6.295137e+03&3.614249e+03&1.635996e+03&2.130541e+03}
+\newarray\stdsfpso
+\readarray{stdsfpso}{3.645873e+08&6.525792e+03&6.619418e-01&1.425163e+02&1.903829e-01&2.992537e-01&2.108978e+00&1.119677e+01&1.084524e-01&1.987697e+05&9.061842e-01&2.087508e+01&1.151908e+01&1.754175e+00&7.597716e+01}
+\newarray\stdsfep
+\readarray{stdsfep}{2.940984e+09&2.180314e+05&0.000000e+00&0.000000e+00&7.606342e-03&1.013019e+00&0.000000e+00&0.000000e+00&0.000000e+00&2.716484e-01&2.996447e-04&2.199706e+02&0.000000e+00&0.000000e+00&6.373723e-01}
+\newarray\stdpso
+\readarray{stdpso}{4.962778e+08&8.457301e+03&5.086404e-01&2.257014e+02&1.996635e-01&2.406625e-01&1.903651e+00&5.460419e+01&9.712358e-02&9.838880e+04&9.740308e-01&5.158630e+01&7.787729e+00&7.200704e-01&9.348504e+01}
+\newarray\stdcaep
+\readarray{stdcaep}{2.347094e+09&2.101425e+05&5.691358e-02&0.000000e+00&1.425465e-02&1.518526e-06&2.797087e-05&1.667206e+04&0.000000e+00&0.000000e+00&0.000000e+00&2.864512e-02&0.000000e+00&0.000000e+00&0.000000e+00}
+
+
+\begin{document}
+	\begin{center}
+		\begin{tabular}{cc|c|c|c|c|}
+			%& & \multicolumn{2}{|c|}{Condition (Gold standard)}\\
+			\cline{3-6}
+			& & SFEP & SFPSO & PSO & CAEP \\
+			\hline
+			
+			\multicolumn{1}{ |c| }{\multirow{3}{*}{T1}}& 
+			\multicolumn{1}{ |c| }{Mean} & \meansfep(1) & \meansfpso(1) & \meanpso(1) & \meancaep(1)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Std} & \stdsfep(1) & \stdsfpso(1) & \stdpso(1) & \stdcaep(1)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Best} & \bestsfep(1) & \bestsfpso(1) & \textbf{\bestpso(1)} & \bestcaep(1)\\
+			\hline
+					
+			\multicolumn{1}{ |c| }{\multirow{3}{*}{T2}}& 
+			\multicolumn{1}{ |c| }{Mean} & \meansfep(2) & \meansfpso(2) & \meanpso(2) & \meancaep(2)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Std} & \stdsfep(2) & \stdsfpso(2) & \stdpso(2) & \stdcaep(2)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Best} & \bestsfep(2) & \textbf{\bestsfpso(2)} & \bestpso(2) & \bestcaep(2)\\
+			\hline
+					
+			\multicolumn{1}{ |c| }{\multirow{3}{*}{T3}}& 
+			\multicolumn{1}{ |c| }{Mean} & \meansfep(3) & \meansfpso(3) & \meanpso(3) & \meancaep(3)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Std} & \stdsfep(3) & \stdsfpso(3) & \stdpso(3) & \stdcaep(3)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Best} & \bestsfep(3) & \bestsfpso(3) & \textbf{\bestpso(3)} & \bestcaep(3)\\
+			\hline
+			
+			\multicolumn{1}{ |c| }{\multirow{3}{*}{T4}}& 
+			\multicolumn{1}{ |c| }{Mean} & \meansfep(4) & \meansfpso(4) & \meanpso(4) & \meancaep(4)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Std} & \stdsfep(4) & \stdsfpso(4) & \stdpso(4) & \stdcaep(4)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Best} & \bestsfep(4) & \bestsfpso(4) & \textbf{\bestpso(4)} & \bestcaep(4)\\
+			\hline
+				
+			\multicolumn{1}{ |c| }{\multirow{3}{*}{T5}}& 
+			\multicolumn{1}{ |c| }{Mean} & \meansfep(5) & \meansfpso(5) & \meanpso(5) & \meancaep(5)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Std} & \stdsfep(5) & \stdsfpso(5) & \stdpso(5) & \stdcaep(5)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Best} & \bestsfep(5) & \textbf{\bestsfpso(5)} & \bestpso(5) & \bestcaep(5)\\
+			\hline
+			
+			\multicolumn{1}{ |c| }{\multirow{3}{*}{T6}}& 
+			\multicolumn{1}{ |c| }{Mean} & \meansfep(6) & \meansfpso(6) & \meanpso(6) & \meancaep(6)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Std} & \stdsfep(6) & \stdsfpso(6) & \stdpso(6) & \stdcaep(6)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Best} & \bestsfep(6) & \textbf{\bestsfpso(6)} & \bestpso(6) & \bestcaep(6)\\
+			\hline
+
+			\multicolumn{1}{ |c| }{\multirow{3}{*}{T7}}& 
+			\multicolumn{1}{ |c| }{Mean} & \meansfep(7) & \meansfpso(7) & \meanpso(7) & \meancaep(7)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Std} & \stdsfep(7) & \stdsfpso(7) & \stdpso(7) & \stdcaep(3)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Best} & \bestsfep(7) & \textbf{\bestsfpso(7)} & \bestpso(7) & \bestcaep(7)\\
+			\hline
+			
+			\multicolumn{1}{ |c| }{\multirow{3}{*}{T8}}& 
+			\multicolumn{1}{ |c| }{Mean} & \meansfep(8) & \meansfpso(8) & \meanpso(8) & \meancaep(8)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Std} & \stdsfep(8) & \stdsfpso(8) & \stdpso(8) & \stdcaep(8)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Best} & \bestsfep(8) & \bestsfpso(8) & \textbf{\bestpso(8)} & \bestcaep(8)\\
+			\hline
+			
+			\multicolumn{1}{ |c| }{\multirow{3}{*}{T9}}& 
+			\multicolumn{1}{ |c| }{Mean} & \meansfep(9) & \meansfpso(9) & \meanpso(9) & \meancaep(9)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Std} & \stdsfep(9) & \stdsfpso(9) & \stdpso(9) & \stdcaep(9)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Best} & \bestsfep(9) & \bestsfpso(9) & \textbf{\bestpso(9)} & \bestcaep(9)\\
+			\hline
+			
+			\multicolumn{1}{ |c| }{\multirow{3}{*}{T10}}& 
+			\multicolumn{1}{ |c| }{Mean} & \meansfep(10) & \meansfpso(10) & \meanpso(10) & \meancaep(10)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Std} & \stdsfep(10) & \stdsfpso(10) & \stdpso(10) & \stdcaep(10)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Best} & \bestsfep(10) & \bestsfpso(10) & \textbf{\bestpso(10)} & \bestcaep(10)\\
+			\hline
+			
+			\multicolumn{1}{ |c| }{\multirow{3}{*}{T11}}& 
+			\multicolumn{1}{ |c| }{Mean} & \meansfep(11) & \meansfpso(11) & \meanpso(11) & \meancaep(11)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Std} & \stdsfep(11) & \stdsfpso(11) & \stdpso(11) & \stdcaep(11)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Best} & \bestsfep(11) & \bestsfpso(11) & \textbf{\bestpso(11)} & \bestcaep(11)\\
+			\hline
+			
+			\multicolumn{1}{ |c| }{\multirow{3}{*}{T12}}& 
+			\multicolumn{1}{ |c| }{Mean} & \meansfep(12) & \meansfpso(12) & \meanpso(12) & \meancaep(12)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Std} & \stdsfep(12) & \stdsfpso(12) & \stdpso(12) & \stdcaep(12)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Best} & \bestsfep(12) & \bestsfpso(12) & \textbf{\bestpso(12)} & \bestcaep(12)\\
+			\hline
+			
+			\multicolumn{1}{ |c| }{\multirow{3}{*}{T13}}& 
+			\multicolumn{1}{ |c| }{Mean} & \meansfep(13) & \meansfpso(13) & \meanpso(13) & \meancaep(13)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Std} & \stdsfep(13) & \stdsfpso(13) & \stdpso(13) & \stdcaep(13)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Best} & \bestsfep(13) & \textbf{\bestsfpso(13)} & \bestpso(13) & \bestcaep(13)\\
+			\hline
+			
+			\multicolumn{1}{ |c| }{\multirow{3}{*}{T14}}& 
+			\multicolumn{1}{ |c| }{Mean} & \meansfep(14) & \meansfpso(14) & \meanpso(14) & \meancaep(14)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Std} & \stdsfep(14) & \stdsfpso(14) & \stdpso(14) & \stdcaep(14)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Best} & \bestsfep(14) & \textbf{\bestsfpso(14)} & \bestpso(14) & \bestcaep(14)\\
+			\hline
+			
+			\multicolumn{1}{ |c| }{\multirow{3}{*}{T15}}& 
+			\multicolumn{1}{ |c| }{Mean} & \meansfep(15) & \meansfpso(15) & \meanpso(15) & \meancaep(15)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Std} & \stdsfep(15) & \stdsfpso(15) & \stdpso(15) & \stdcaep(15)\\
+			\cline{2-6}
+			\multicolumn{1}{ |c| }{} & \multicolumn{1}{ |c| }{Best} & \bestsfep(15) & \textbf{\bestsfpso(15)} & \bestpso(15) & \bestcaep(15)\\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{document}

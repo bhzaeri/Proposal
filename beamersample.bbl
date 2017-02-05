@@ -1,0 +1,116 @@
+\begin{thebibliography}{}
+
+\bibitem[Ali, 2008]{R:1}
+Ali, M.~Z. (2008).
+\newblock {\em Using cultural algorithms to solve optimization problems with a
+  social fabric approach}.
+\newblock ProQuest.
+
+\bibitem[Ali et~al., 2012]{ali2012socio}
+Ali, M.~Z., Salhieh, A.~M., and Reynolds, R.~G. (2012).
+\newblock Socio-cultural evolution via neighborhood-restructuring in intricate
+  multi-layered networks.
+\newblock In {\em 2012 IEEE Congress on Evolutionary Computation}, pages 1--8.
+  IEEE.
+
+\bibitem[Ali et~al., 2016]{ali2016leveraged}
+Ali, M.~Z., Suganthan, P.~N., Reynolds, R.~G., and Al-Badarneh, A.~F. (2016).
+\newblock Leveraged neighborhood restructuring in cultural algorithms for
+  solving real-world numerical optimization problems.
+\newblock {\em IEEE transactions on evolutionary computation}, 20(2):218--231.
+
+\bibitem[Che et~al., 2010]{che2010robust}
+Che, X., Ali, M., and Reynolds, R.~G. (2010).
+\newblock Robust evolution optimization at the edge of chaos: Commercialization
+  of culture algorithms.
+\newblock In {\em IEEE Congress on Evolutionary Computation}, pages 1--8. IEEE.
+
+\bibitem[Chen et~al., 2006]{chen2006tribe}
+Chen, K., Li, T., and Cao, T. (2006).
+\newblock Tribe-pso: A novel global optimization algorithm and its application
+  in molecular docking.
+\newblock {\em Chemometrics and intelligent laboratory systems},
+  82(1):248--259.
+
+\bibitem[Chen et~al., 2014]{chen2014problem}
+Chen, Q., Liu, B., Zhang, Q., Liang, J., Suganthan, P., and Qu, B. (2014).
+\newblock Problem definitions and evaluation criteria for cec 2015 special
+  session on bound constrained single-objective computationally expensive
+  numerical optimization.
+\newblock Technical report, Technical Report, Computational Intelligence
+  Laboratory, Zhengzhou University, Zhengzhou.
+
+\bibitem[Clerc, 2010]{clerc2010particle}
+Clerc, M. (2010).
+\newblock {\em Particle swarm optimization}, volume~93.
+\newblock John Wiley \& Sons.
+
+\bibitem[De~Oca et~al., 2009]{de2009heterogeneous}
+De~Oca, M. A.~M., Pe{\~n}a, J., Stutzle, T., Pinciroli, C., and Dorigo, M.
+  (2009).
+\newblock Heterogeneous particle swarm optimizers.
+\newblock In {\em 2009 IEEE Congress on Evolutionary Computation}, pages
+  698--705. IEEE.
+
+\bibitem[Dorigo et~al., 2006]{dorigo2006ant}
+Dorigo, M., Birattari, M., and Stutzle, T. (2006).
+\newblock Ant colony optimization.
+\newblock {\em IEEE computational intelligence magazine}, 1(4):28--39.
+
+\bibitem[Eiben and Smith, 2003]{eiben2003introduction}
+Eiben, A.~E. and Smith, J.~E. (2003).
+\newblock {\em Introduction to evolutionary computing}, volume~53.
+\newblock Springer.
+
+\bibitem[Guo et~al., 2011]{guo2011novel}
+Guo, Y.-n., Cheng, J., Cao, Y.-y., and Lin, Y. (2011).
+\newblock A novel multi-population cultural algorithm adopting knowledge
+  migration.
+\newblock {\em Soft computing}, 15(5):897--905.
+
+\bibitem[Kennedy et~al., 2001]{kennedy2001swarm}
+Kennedy, J., Kennedy, J.~F., Eberhart, R.~C., and Shi, Y. (2001).
+\newblock {\em Swarm intelligence}.
+\newblock Morgan Kaufmann.
+
+\bibitem[Kobti et~al., 2013]{kobti2013heterogeneous}
+Kobti, Z. et~al. (2013).
+\newblock Heterogeneous multi-population cultural algorithm.
+\newblock In {\em 2013 IEEE Congress on Evolutionary Computation}, pages
+  292--299. IEEE.
+
+\bibitem[Man et~al., 2012]{man2012genetic}
+Man, K.-F., Tang, K.~S., and Kwong, S. (2012).
+\newblock {\em Genetic algorithms: concepts and designs}.
+\newblock Springer Science \& Business Media.
+
+\bibitem[Papoulis and Pillai, 2002]{papoulis2002probability}
+Papoulis, A. and Pillai, S.~U. (2002).
+\newblock {\em Probability, random variables, and stochastic processes}.
+\newblock Tata McGraw-Hill Education.
+
+\bibitem[Reynolds, 1994]{reynolds1994introduction}
+Reynolds, R.~G. (1994).
+\newblock An introduction to cultural algorithms.
+\newblock In {\em Proceedings of the third annual conference on evolutionary
+  programming}, volume 131139. Singapore.
+
+\bibitem[Reynolds and Ali, 2008]{reynolds2008computing}
+Reynolds, R.~G. and Ali, M. (2008).
+\newblock Computing with the social fabric: The evolution of social
+  intelligence within a cultural framework.
+\newblock {\em IEEE computational intelligence magazine}, 3(1):18--30.
+
+\bibitem[Reynolds et~al., 2010]{reynolds2010weaving}
+Reynolds, R.~G., Che, X., and Ali, M. (2010).
+\newblock Weaving the social fabric: The past, present and future of
+  optimization problem solving with cultural algorithms.
+\newblock {\em International Journal of Intelligent Computing and Cybernetics},
+  3(4):561--592.
+
+\bibitem[Sterling, 2004]{sterling2004aggregation}
+Sterling, S.~E. (2004).
+\newblock Aggregation techniques to characterize social networks.
+\newblock Technical report, DTIC Document.
+
+\end{thebibliography}

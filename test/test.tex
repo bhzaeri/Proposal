@@ -1,0 +1,30 @@
+\documentclass[12pt]{article}
+
+\newcount\fooo
+\long\def\addto#1#2{\expandafter\def\expandafter#1\expandafter{#1#2}}
+
+\begin{document}
+\begin{center}
+	\textbf{ABSTRACT}
+\end{center}
+In this thesis, we proposed a new approach to utilize the dynamics of social interactions in solving complex and multi-modal problems.  In the literature of Cultural Algorithms, Social fabric has been proposed as a new method to use social phenomena to improve the search process of CAs. In this research, we introduce the Heterogenous Neighborhood Restructuring as a new adaptive method to allow individuals to rearrange their neighborhoods to avoid local optima or stagnation during the search process. 
+Also, we applied the concept of Confidence Interval from Statistics to improve the performance of knowledge sources in the Belief Space. This approach aims at improving the robustness and accuracy of Normative KS. The CEC2015 benchmark optimization functions are used to evaluate our proposed approaches against standard versions of CA and Social Fabric.
+
+
+\def\tabledata{} \fooo=10
+\loop
+   \addto\tabledata{11 & 12 & 13\\
+                    \hline}
+   \advance \fooo -1
+   \ifnum \fooo>0
+\repeat 
+
+\begin{tabular}{|c|c|c|}
+   \hline
+   \tabledata
+   21 & 22 & 23\\ \hline
+   \tabledata
+%   \fooo=10
+\end{tabular}
+
+\end{document}
